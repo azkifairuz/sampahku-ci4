@@ -1,4 +1,3 @@
-<?php echo view('layout/header-user') ?>
 <!DOCTYPE html>
 <html>
 
