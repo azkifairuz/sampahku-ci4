@@ -1,3 +1,4 @@
+<?php echo view('layout/v_header-login') ?>
 <!DOCTYPE html>
 <html>
 
@@ -9,9 +10,7 @@
 </head>
 
 <body class="font-poppins  md:mx-10 my-5  bg-[#F1FAEE]">
-  <nav class="w-full">
-    <img src="asset/Logo.png" alt="logo sampaku" class=" mx-auto md:mx-0">
-  </nav>
+  
   <section class="flex flex-col mt-10">
     <div
       class="md:w-[633px] w-full mx-auto flex flex-col py-[52px] items-center text-white bg-blueMain-surface md:rounded-[20px] px-5 h-screen md:max-h-[739px] md:px-[72px]">
@@ -33,8 +32,9 @@
             class="outline-none border-[2px] border-[#D8D8D8] p-[12px] font-[500] leading-[28px] focus:border-[#029791] rounded-[6px] shadow-text-field">
         </label>
         <button
-          class="bg-greenMain py-[16px] shadow-text-field mt-[60px] rounded-[6px] hover:bg-blueMain-hover text-white text-[20px] leading-[28px] text-center font-bold">Masuk</button>
+          class="bg-greenMain py-[16px] shadow-text-field mt-5 md:mt-[60px] rounded-[6px] hover:bg-blueMain-hover text-white text-[20px] leading-[28px] text-center font-bold">Masuk</button>
       </form>
+      <p class="mt-2 text-lg">Belum Punya Akun? <a href="<?php echo base_url("register") ?>" class="font-bold text-greenMain">daftar!!</a></p>
     </div>
   </section>
 </body>
