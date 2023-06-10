@@ -1,3 +1,4 @@
+<?php echo view('layout/v_header-login') ?>
 <!DOCTYPE html>
 <html>
 
@@ -24,12 +25,8 @@
       <form action="" class="form flex flex-col w-full gap-7 mt-[24px]">
         <label for="noTelp" class="font-bold w-full  flex flex-col gap-2 text-[20px]">
           Alamat
-          <textarea 
-          name="noTelp" 
-          id="noTelp" 
-          cols="10" 
-          rows="10" 
-          class="outline-none border-[2px] border-[#D8D8D8] text-black p-[12px] font-[500] leading-[28px] focus:border-[#029791] rounded-[6px] shadow-text-field">
+          <textarea name="noTelp" id="noTelp" cols="10" rows="10"
+            class="outline-none border-[2px] border-[#D8D8D8] text-black p-[12px] font-[500] leading-[28px] focus:border-[#029791] rounded-[6px] shadow-text-field">
         </textarea>
         </label>
         <button
