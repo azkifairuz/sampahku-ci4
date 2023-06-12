@@ -25,14 +25,14 @@ class Login extends BaseController
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
 
-        $getDataId = $this->modelLogin->getDataId($username);
+        $getDataId = $this->modelLogin->getDataId($username,$password);
         
         if ($getDataId == null) {
             session()->setFlashdata('message', 'Username atau Password tidak ditemukan');
-            // return redirect()->to('login');
+            var_dump( $getDataId);
         }
         foreach ($getDataId as $data):
-            if (password_verify($password, $data->password)) {
+            if ($password == $data->password) {
                 $dataSession = [
 
                     'sesid_customer' => $data->id_customer,
@@ -42,11 +42,11 @@ class Login extends BaseController
                 ];
 
                 $this->session->set($dataSession);
-                return redirect()->to('beranda');
+                return redirect()->to(base_url('beranda'));
             } else {
                 session()->setFlashdata('message', 'cek kembali Username atau Password anda');
-                return redirect()->to('login');
-                // echo "gagal"; 
+                // return redirect()->to('login');
+                echo "gagal"; 
             }
         endforeach;
     }
