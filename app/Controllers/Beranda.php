@@ -1,11 +1,16 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\ModelMatakuliah;
+use App\Models\ModelCategori;
 
 class Beranda extends BaseController
 {
     private $kategori = "";
+
+    public function __construct()
+    {
+        $this->kategori = new ModelCategori;
+    }
 
     public function index()
     {
