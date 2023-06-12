@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class ModelLogin extends Model
 {
    
-    public function getDataId()
+    public function getKategori()
     {
         $builder = $this->db->query("SELECT * FROM `kategori` ");
         return $builder->getResult();
