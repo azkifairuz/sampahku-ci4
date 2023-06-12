@@ -10,10 +10,10 @@
   <title>Daftar | sampahku</title>
 </head>
 
-<body class="font-poppins  md:mx-10 my-5  bg-[#F1FAEE]">
+<body class="font-poppins py-10  md:mx-10 my-5  bg-[#F1FAEE]">
   <section class="flex flex-col mt-10">
     <div
-      class="md:w-[633px] w-full mx-auto flex flex-col py-[52px] items-center text-white bg-blueMain-surface md:rounded-[20px] px-5 h-screen md:px-[72px]">
+      class="md:w-[633px] w-full mx-auto flex flex-col py-[52px] items-center text-white bg-blueMain-surface md:rounded-[20px] px-5 h-screen md:h-fit md:px-[72px]">
       <div class="text-center border-b-2 pb-1 flex flex-col gap-3 border-b-white w-fit">
         <h1 class="font-bold text-5xl">
           Daftar

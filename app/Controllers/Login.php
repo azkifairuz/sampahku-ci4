@@ -9,7 +9,6 @@ class Login extends BaseController
 {
     private $session = "";
     private $modelLogin = "";
-    protected $table = "users";
     public function __construct()
     {
         $this->session = \Config\Services::session();
@@ -20,17 +19,17 @@ class Login extends BaseController
     {
         return view('customer/v_login.php');
     }
-    
+
     public function cekLogin()
     {
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
 
-        $getDataId = $this->modelLogin->getDataId($this->table, $username);
-
+        $getDataId = $this->modelLogin->getDataId($username);
+        
         if ($getDataId == null) {
             session()->setFlashdata('message', 'Username atau Password tidak ditemukan');
-            return redirect()->to('login');
+            // return redirect()->to('login');
         }
         foreach ($getDataId as $data):
             if (password_verify($password, $data->password)) {
