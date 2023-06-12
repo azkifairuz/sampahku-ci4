@@ -20,15 +20,25 @@
         </h1>
         <p class="text-lg">Isi form dibawah untuk Daftar</p>
       </div>
-      <form  action="<?php echo base_url('register/inputAlamat/')?>"class="form  flex flex-col w-full gap-7 mt-[47px]">
+      <form  action="<?php echo base_url('register/daftarUser/')?>"class="form  flex flex-col w-full gap-7 mt-[47px]">
         <label for="name" class="font-bold w-full flex flex-col gap-2 text-[20px]">
-          Name
+          Nama Lengkap
           <input type="text" placeholder="Masukan name" name="name" id="name"
+            class="outline-none  border-[2px] border-[#D8D8D8] text-black p-[12px] font-[500] leading-[28px] focus:border-[#029791] rounded-[6px] shadow-text-field">
+        </label>
+        <label for="username" class="font-bold w-full flex flex-col gap-2 text-[20px]">
+          Username
+          <input type="text" placeholder="Masukan username" name="username" id="username"
             class="outline-none  border-[2px] border-[#D8D8D8] text-black p-[12px] font-[500] leading-[28px] focus:border-[#029791] rounded-[6px] shadow-text-field">
         </label>
         <label for="email" class="font-bold w-full flex flex-col gap-2 text-[20px]">
           email
           <input type="text" placeholder="Masukan email" name="email" id="email"
+            class="outline-none  border-[2px] border-[#D8D8D8] text-black p-[12px] font-[500] leading-[28px] focus:border-[#029791] rounded-[6px] shadow-text-field">
+        </label>
+        <label for="noHp" class="font-bold w-full flex flex-col gap-2 text-[20px]">
+          Nomor Hp
+          <input type="text" placeholder="Masukan noHp" name="noHp" id="noHp"
             class="outline-none  border-[2px] border-[#D8D8D8] text-black p-[12px] font-[500] leading-[28px] focus:border-[#029791] rounded-[6px] shadow-text-field">
         </label>
         <label for="password" class="font-bold flex flex-col gap-2 text-[20px]">
