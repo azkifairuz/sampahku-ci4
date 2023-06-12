@@ -13,11 +13,12 @@ class ModelCategori extends Model
     return $builder->getResult();
   }
 
-  public function getListMitraByCategori($idKatgeori)
+  public function getListMitraByCategori($idKategori)
   {
     $query = $this->db->query("SELECT a.`nama_mitra`, a.`alamat`,b.`kategori`
                                FROM `mitra` a 
-                               INNER JOIN `kategori` b ON a.`id_kategori` = b.id_kategori");
+                               INNER JOIN `kategori` b ON a.`id_kategori` = b.id_kategori 
+                               WHERE a.id_kategori= '$idKategori'");
     return $query->getResult();
   }
 }

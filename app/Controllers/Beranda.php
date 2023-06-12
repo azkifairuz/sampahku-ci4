@@ -20,4 +20,13 @@ class Beranda extends BaseController
     );
         return view('customer/v_beranda.php',$data);
     }
+    public function pilihMitra($idKategori)
+    {
+      $mitraBykategori =  $this->kategori->getListMitraByCategori($idKategori);
+      $data = array(
+        'showListMitra' => $mitraBykategori,
+      );
+
+      return view('customer/v_pilihmitra.php',$data);
+    }
 }
