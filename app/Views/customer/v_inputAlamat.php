@@ -10,9 +10,6 @@
 </head>
 
 <body class="font-poppins  md:mx-10 my-5  bg-[#F1FAEE]">
-  <nav class="w-full">
-    <img src="../../asset/Logo.png" alt="logo sampaku" class=" mx-auto md:mx-0">
-  </nav>
   <section class="flex flex-col mt-10">
     <div
       class="md:w-[633px] w-full mx-auto flex flex-col py-[52px] items-center text-white bg-blueMain-surface md:rounded-[20px] px-5 h-fit md:max-h-[739px] md:px-[72px]">
@@ -22,10 +19,11 @@
         </h1>
         <p class="text-lg">Tambahkan Alamat</p>
       </div>
-      <form action="" class="form flex flex-col w-full gap-7 mt-[24px]">
-        <label for="noTelp" class="font-bold w-full  flex flex-col gap-2 text-[20px]">
+      <form action="<?php echo base_url('register/inputAlamat/')?>" class="form flex flex-col w-full gap-7 mt-[24px]">
+        <label for="alamat" class="font-bold w-full flex flex-col gap-2 text-[20px]">
           Alamat
-          <textarea name="noTelp" id="noTelp" cols="10" rows="10"
+          <input type="hidden" name="id" value="<?php echo $id; ?>">
+          <textarea name="alamat" id="alamat" cols="10" rows="10"
             class="outline-none border-[2px] border-[#D8D8D8] text-black p-[12px] font-[500] leading-[28px] focus:border-[#029791] rounded-[6px] shadow-text-field">
         </textarea>
         </label>
