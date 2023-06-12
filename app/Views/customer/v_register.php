@@ -20,7 +20,7 @@
         </h1>
         <p class="text-lg">Isi form dibawah untuk Daftar</p>
       </div>
-      <form  action="<?php echo base_url('register/daftarUser/')?>"class="form  flex flex-col w-full gap-7 mt-[47px]">
+      <form  action="<?php echo base_url('register/daftarUser/')?>" class="form  flex flex-col w-full gap-7 mt-[47px]">
         <label for="name" class="font-bold w-full flex flex-col gap-2 text-[20px]">
           Nama Lengkap
           <input type="text" placeholder="Masukan name" name="name" id="name"

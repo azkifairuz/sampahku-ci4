@@ -12,27 +12,28 @@
 <body class="font-poppins">
 <?php echo view('layout/v_header-user') ?>
 
-  <section class="w-full px-7 py-5 bg-white flex gap-10 justify-around">
+  <form action="" method="post" class="w-full px-7 py-5 bg-white flex gap-10 justify-around">
     <?php
     foreach ($showMitra as $mitra) {
       ?>
-      <div>
+      <flex>
         <p>
           <?php echo $mitra->nama_mitra ?>
         </p>
         <p>
           <?php echo $mitra->alamat ?>
         </p>
-        <select name="" id="">
+        <input type="text" name="kilo">
+        <select name="order" id="">
           <option value="">diantar</option>
           <option value="">dijemput</option>
         </select>
-      </div>
+      </flex>
       <?php
     }
     ?>
     <button>pesan</button>
-  </section>
+  </form>
 </body>
 
 </html>
