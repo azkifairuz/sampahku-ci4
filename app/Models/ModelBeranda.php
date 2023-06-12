@@ -4,19 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ModelCategori extends Model
+class ModelBeranda extends Model
 {
 
-  public function getKategori()
+  public function getMitraById($idMitra)
   {
-    $builder = $this->db->query("SELECT * FROM `kategori` ");
+    $builder = $this->db->query("SELECT * FROM `mitra` WHERE `id_mitra` = '$idMitra'");
     return $builder->getResult();
   }
 
-
   public function getListMitraByCategori($idKategori)
   {
-    $query = $this->db->query("SELECT a.`nama_mitra`,a.`id_mitra`, a.`alamat`,b.`kategori`
+    $query = $this->db->query("SELECT a.`nama_mitra`, a.`alamat`,b.`kategori`
                                FROM `mitra` a 
                                INNER JOIN `kategori` b ON a.`id_kategori` = b.id_kategori 
                                WHERE a.id_kategori= '$idKategori'");

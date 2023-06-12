@@ -10,7 +10,7 @@
 
 <body class="font-poppins">
   <nav class="w-full hidden md:flex justify-between px-10 items-center">
-    <img src="asset/Logo.png" alt="logo sampaku" class=" mx-auto md:mx-0">
+    <img src="../../../asset/Logo.png" alt="logo sampaku" class=" mx-auto md:mx-0">
     <ul class="text-lg flex gap-5">
       <li class="cursor-pointer">
         Beranda

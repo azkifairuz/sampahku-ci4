@@ -1,15 +1,18 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\ModelBeranda;
 use App\Models\ModelCategori;
 
 class Beranda extends BaseController
 {
     private $kategori = "";
+    private $beranda = "";
 
     public function __construct()
     {
         $this->kategori = new ModelCategori;
+        $this->beranda = new ModelBeranda;
     }
 
     public function index()
@@ -28,5 +31,14 @@ class Beranda extends BaseController
       );
 
       return view('customer/v_pilihmitra.php',$data);
+    }
+
+    public function showMitra($idMitra)
+    {
+      $mitra =  $this->beranda->getMitraById($idMitra);
+      $data = array (
+        'showMitra' => $mitra,
+      );
+      return view('customer/v_showmitra.php',$data);
     }
 }

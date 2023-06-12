@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./css/app.css" rel="stylesheet" />
+  <link rel="stylesheet"  href="./css/app.css" />
   <title>Masuk | sampahku</title>
 </head>
 
@@ -20,7 +20,7 @@
         </h1>
         <p class="text-lg">Isi form dibawah untuk masuk</p>
       </div>
-      <form action="<?php echo base_url('login/ceklogin') ?>" class="form flex flex-col w-full gap-7 mt-[47px]">
+      <form action="<?php echo base_url('login/ceklogin') ?>" method="post" class="form flex flex-col w-full gap-7 mt-[47px]">
         <label for="username" class="font-bold w-full flex flex-col gap-2 text-[20px]">
           Username
           <input type="text" placeholder="Masukan Username" name="username" id="username"
