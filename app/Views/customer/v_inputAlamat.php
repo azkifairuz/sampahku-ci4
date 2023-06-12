@@ -10,9 +10,6 @@
 </head>
 
 <body class="font-poppins  md:mx-10 my-5  bg-[#F1FAEE]">
-  <nav class="w-full">
-    <img src="../../asset/Logo.png" alt="logo sampaku" class=" mx-auto md:mx-0">
-  </nav>
   <section class="flex flex-col mt-10">
     <div
       class="md:w-[633px] w-full mx-auto flex flex-col py-[52px] items-center text-white bg-blueMain-surface md:rounded-[20px] px-5 h-fit md:max-h-[739px] md:px-[72px]">

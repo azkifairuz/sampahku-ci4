@@ -36,5 +36,4 @@ class ModelAuth extends Model
 
   }
 
-
 }
