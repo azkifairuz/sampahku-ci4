@@ -29,7 +29,8 @@ class Login extends BaseController
         
         if ($getDataId == null) {
             session()->setFlashdata('message', 'Username atau Password tidak ditemukan');
-            var_dump( $getDataId);
+            // var_dump( $getDataId);
+            return redirect()->to( base_url('login') );
         }
         foreach ($getDataId as $data):
             if ($password == $data->password) {
@@ -45,8 +46,8 @@ class Login extends BaseController
                 return redirect()->to(base_url('beranda'));
             } else {
                 session()->setFlashdata('message', 'cek kembali Username atau Password anda');
-                // return redirect()->to('login');
-                echo "gagal"; 
+                return redirect()->to( base_url('login') );
+                // echo "gagal"; 
             }
         endforeach;
     }

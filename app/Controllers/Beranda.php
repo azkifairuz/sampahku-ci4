@@ -35,7 +35,7 @@ class Beranda extends BaseController
 
     public function showMitra($idMitra)
     {
-      $mitra =  $this->kategori->getMitraById($idMitra);
+      $mitra =  $this->beranda->getMitraById($idMitra);
       $data = array (
         'showMitra' => $mitra,
       );

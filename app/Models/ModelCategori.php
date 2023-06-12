@@ -13,6 +13,7 @@ class ModelCategori extends Model
     return $builder->getResult();
   }
 
+
   public function getListMitraByCategori($idKategori)
   {
     $query = $this->db->query("SELECT a.`nama_mitra`,a.`id_mitra`, a.`alamat`,b.`kategori`
