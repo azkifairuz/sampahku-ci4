@@ -36,5 +36,13 @@ class Admin extends BaseController
         );
         return view('admin/v_list_mitra',$data);
     }
+    public function customer()
+    {
+        $customer = $this->admin->getListCustomer();
+        $data = array(
+            'listcustomer' => $customer,
+        );
+        return view('admin/v_list_customer',$data);
+    }
 
 }

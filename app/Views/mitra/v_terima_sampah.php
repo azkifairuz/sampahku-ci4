@@ -83,7 +83,7 @@ echo view('layout/v_sidebar_mitra');
             </table>
 
           </div>
-          <a class="bg-greenMain w-1/2 text-white text-center uppercase rounded-xl py-2  px-5"
+          <a class="bg-greenMain-surface w-1/2 text-white text-center uppercase rounded-xl py-2  px-5"
             href="<?php echo base_url('orderSampahMitra/accTerima/' . $historiAntar->id) ?>">
             <button>ACC</button>
           </a>

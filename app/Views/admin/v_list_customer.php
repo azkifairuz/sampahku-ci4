@@ -12,7 +12,7 @@
   <div class="text-black px-[100px] my-52">
     <div class="flex justify-between items-center my-2">
       <h1 class="text-2xl font-bold">
-        List Customer Yang terdaftar
+        List Customer Yang Terdaftar
       </h1>
     </div>
     <div class="relative mx-auto overflow-x-auto shadow-md sm:rounded-lg">
@@ -33,7 +33,7 @@
             ?>
             <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
               <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <?php echo $customer->nama_customer ?>
+                <?php echo $customer->fullname ?>
               </td>
               <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 <?php echo $customer->coin?>

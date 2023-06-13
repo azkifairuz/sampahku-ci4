@@ -16,7 +16,7 @@ class ModelCategori extends Model
 
   public function getListMitraByCategori($idKategori)
   {
-    $query = $this->db->query("SELECT a.`nama_mitra`,a.`id_mitra`, a.`alamat`,b.`kategori`
+    $query = $this->db->query("SELECT a.`nama_mitra`,a.url_img,a.`id_mitra`, a.`alamat`,b.`kategori`
                                FROM `mitra` a 
                                INNER JOIN `kategori` b ON a.`id_kategori` = b.id_kategori 
                                WHERE a.id_kategori= '$idKategori'");

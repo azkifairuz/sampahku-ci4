@@ -13,7 +13,7 @@
 
   <section class="flex flex-col mt-10">
     <div
-      class="md:w-[633px] w-full mx-auto flex flex-col py-[52px] items-center text-white bg-blueMain-surface md:rounded-[20px] px-5 h-screen md:h-fit  md:px-[72px]">
+      class="md:w-[633px] w-full mx-auto flex flex-col py-[52px] items-center text-white bg-greenMain-surface md:rounded-[20px] px-5 h-screen md:h-fit  md:px-[72px]">
       <div class="text-center border-b-2 pb-1 flex flex-col gap-3 border-b-white w-fit">
         <h1 class="font-bold text-5xl">
           Masuk
