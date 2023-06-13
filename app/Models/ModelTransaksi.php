@@ -30,7 +30,11 @@ class ModelTransaksi extends Model
     return $query;
   }
 
-
+  public function getTransaksiJemput()
+  {
+    $builder = $this->db->query("SELECT * FROM `transaksi_jemput` ");
+    return $builder->getResult();
+  }
   
 
 
