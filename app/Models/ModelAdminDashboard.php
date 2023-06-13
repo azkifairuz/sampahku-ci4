@@ -11,4 +11,9 @@ class ModelAdminDashboard extends Model
     $builder = $this->db->query("SELECT * FROM `mitra`");
     return $builder->getResult();
   }
+  public function getListCustomer($idMitra)
+  {
+    $builder = $this->db->query("SELECT * FROM `customer`");
+    return $builder->getResult();
+  }
 }
