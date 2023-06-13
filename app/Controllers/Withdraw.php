@@ -31,11 +31,14 @@ class Withdraw extends BaseController
         if ($coinRequest > $currentCoin ) {
             echo "coin tidak cukup";
         }else{
+            $coinBerkurang = $currentCoin - $coinRequest;
+
             $data = array (
                 'id_customer' => $idCust,
                 'tgl_withdraw' => $currentDate,
-                'coin_keluar' => $coinRequest
+                'coin_keluar' => $coinRequest,
             );
+            $this->withdraw->updateCoin($idCust,$coinBerkurang);
             $this->withdraw->withdrawCoin($data);
             echo "berhasil";
         }

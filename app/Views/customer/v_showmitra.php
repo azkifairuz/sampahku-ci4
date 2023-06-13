@@ -22,7 +22,6 @@
           <input type="hidden" name="idMitra" value="<?php echo $mitra->id_mitra ?>">
           <input type="hidden" name="idkategori" value="<?php echo $mitra->id_kategori ?>">
           <input type="text" name="berat">
-
         </p>
         <p>
           <?php echo $mitra->alamat ?>

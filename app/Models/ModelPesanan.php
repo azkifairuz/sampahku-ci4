@@ -28,8 +28,12 @@ class ModelPesanan extends Model
   {
     $query = $this->db->table('transaksi_jemput')
       ->insert($data);
+    return $query;
+  }
 
-
+  public function updateStatusJemput($status,$id)
+  {
+    $query = $this->db->query("UPDATE `transaksi_jemput` SET `status`='$status' WHERE id = '$id'");
     return $query;
   }
 
