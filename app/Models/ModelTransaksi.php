@@ -15,6 +15,12 @@ class ModelTransaksi extends Model
 
     return $query;
   }
+
+  public function getTransaksiTerima()
+  {
+    $builder = $this->db->query("SELECT * FROM `transaksi_terima` ");
+    return $builder->getResult();
+  }
   public function transaksiJemput($data)
   {
     $query = $this->db->table('transaksi_jemput')
@@ -23,6 +29,9 @@ class ModelTransaksi extends Model
 
     return $query;
   }
+
+
+  
 
 
 }

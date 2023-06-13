@@ -29,7 +29,7 @@
   
           session()->setFlashdata('success', 'berhasil');
           $this->transaksi->transaksiJemput($data);
-          if ($isTerima == 'terima') {
+          if ($isTerima == 'antar') {
             echo "terima";
             $this->transaksi->transkasiTerima($data);
 

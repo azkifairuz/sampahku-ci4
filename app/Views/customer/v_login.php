@@ -35,7 +35,8 @@
           class="bg-greenMain py-[16px] shadow-text-field mt-5 md:mt-[60px] rounded-[6px] hover:bg-blueMain-hover text-white text-[20px] leading-[28px] text-center font-bold">Masuk</button>
       </form>
       <p class="mt-2 text-lg">Belum Punya Akun? <a href="<?php echo base_url("register") ?>"
-          class="font-bold text-greenMain">daftar!!</a></p>
+          class="font-bold text-greenMain">daftar!!</a>
+      </p>
     </div>
   </section>
 </body>
