@@ -20,13 +20,21 @@ class Pesanan extends BaseController
     public function showPesananJemput()
     {
         session();
-        $mitraId = $_SESSION['sesid_customer'];
-        $historiAntar =  $this->pesanan->getTransaksiTerima($mitraId);
+        $mitraId = $_SESSION['sesid_mitra'];
         $historiJemput =  $this->pesanan->getTransaksiJemput($mitraId);
         $data = array (
-          'showHistoriAntar' => $historiAntar,
           'showHistoriJemput' => $historiJemput,
         );
-        return view('customer/v_histori.php',$data);
+        return view('customer/v_jemput_sampah.php',$data);
+    }
+    public function showPesananAntar()
+    {
+        session();
+        $mitraId = $_SESSION['sesid_mitra'];
+        $historiAntar =  $this->pesanan->getTransaksiTerima($mitraId);
+        $data = array (
+          'showhis$historiAntar' => $historiAntar,
+        );
+        return view('customer/v_terima_sampah.php',$data);
     }
 }
