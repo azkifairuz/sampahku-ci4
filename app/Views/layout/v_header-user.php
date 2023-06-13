@@ -22,7 +22,7 @@
         mitra
       </li>
       <li class="cursor-pointer">
-        transaksi
+        histori
       </li>
       <li class="cursor-pointer">
         Akun

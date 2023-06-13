@@ -39,6 +39,15 @@
             echo "jemput";
           }
       }
+      public function showHistori(){
+        $historiAntar =  $this->transaksi->getTransaksiTerima();
+        $historiJemput =  $this->transaksi->getTransaksiJemput();
+        $data = array (
+          'showHistoriAntar' => $historiAntar,
+          'showHistoriJemput' => $historiJemput,
+        );
+        return view('customer/v_histori.php',$data);
+      }
   
     }
     
