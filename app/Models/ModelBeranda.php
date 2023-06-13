@@ -13,6 +13,12 @@ class ModelBeranda extends Model
     return $builder->getResult();
   }
 
+  public function getCoin($idCustomer)
+  {
+    $builder = $this->db->query("SELECT coin FROM `customer` WHERE `id_customer` = '$idCustomer'");
+    return $builder->getResult();
+  }
+
   public function getListMitraByCategori($idKategori)
   {
     $query = $this->db->query("SELECT a.`nama_mitra`, a.`alamat`,b.`kategori`

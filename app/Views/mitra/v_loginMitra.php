@@ -1,12 +1,11 @@
-<?php echo view('layout/v_header-login') ?>
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet"  href="./css/app.css" />
-  <title>Masuk | sampahku</title>
+  <link rel="stylesheet"  href="<?php echo base_url("css/app.css") ?>" />
+  <title>Masuk | Mitra</title>
 </head>
 
 <body class="font-poppins  md:mx-10 my-5  bg-[#F1FAEE]">
@@ -20,7 +19,7 @@
         </h1>
         <p class="text-lg">Isi form dibawah untuk masuk</p>
       </div>
-      <form action="<?php echo base_url('login/ceklogin') ?>" method="post" class="form flex flex-col w-full gap-7 mt-[47px]">
+      <form action="<?php echo base_url('login/loginMitra') ?>" method="post" class="form flex flex-col w-full gap-7 mt-[47px]">
         <label for="username" class="font-bold w-full flex flex-col gap-2 text-[20px]">
           Username
           <input type="text" placeholder="Masukan Username" name="username" id="username"
