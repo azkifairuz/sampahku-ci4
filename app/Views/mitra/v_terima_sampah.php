@@ -22,7 +22,7 @@ echo view('layout/v_sidebar_mitra');
 
         foreach ($showHistoriAntar as $historiAntar) {
           ?>
-          <div class="rounded-lg border-gray-200 w-full h-fit shadow-text-field bg-blueMain-surface p-5 text-white">
+          <div class="rounded-lg border-gray-200 w-full h-fit shadow-text-field bg-greenMain-surface p-5 text-white">
             <table>
               <tr>
                 <td class="text-lg font-bold ">Pemesan</td>
