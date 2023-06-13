@@ -6,12 +6,12 @@ use CodeIgniter\Model;
 
 class ModelAdminDashboard extends Model
 {
-  public function getListMitra($idMitra)
+  public function getListMitra()
   {
     $builder = $this->db->query("SELECT * FROM `mitra`");
     return $builder->getResult();
   }
-  public function getListCustomer($idMitra)
+  public function getListCustomer()
   {
     $builder = $this->db->query("SELECT * FROM `customer`");
     return $builder->getResult();
