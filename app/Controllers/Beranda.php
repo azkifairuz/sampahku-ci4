@@ -17,12 +17,19 @@ class Beranda extends BaseController
 
     public function index()
     {
+      session();
+      $username = $_SESSION['username'];
+      $idUser = $_SESSION['sesid_customer'];
       $kategori = $this->kategori->getKategori();
+      $coin = $this->beranda->getCoin($idUser);
       $data = array(
         'showKategori' => $kategori,
+        'username' => $username,
+        'coins' => $coin,
     );
         return view('customer/v_beranda.php',$data);
     }
+    
     public function pilihMitra($idKategori)
     {
       $mitraBykategori =  $this->kategori->getListMitraByCategori($idKategori);

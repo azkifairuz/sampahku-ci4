@@ -27,7 +27,14 @@ class OrderSampahMitra extends BaseController
     }
     public function orderJemput()
     {
+        session();
+        $mitraId = $_SESSION['sesid_mitra'];
+        $historiJemput = $this->pesanan->getTransaksiJemput($mitraId);
+        $data = array(
+            'showHistoriJemput' => $historiJemput,
+        );
 
-        return view('mitra/v_jemput_sampah');
+
+        return view('mitra/v_jemput_sampah',$data);
     }
 }
