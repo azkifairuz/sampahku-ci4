@@ -28,7 +28,7 @@
         </p>
         <input type="text" name="berat">
         <select name="order" id="">
-          <option value="terima">antar</option>
+          <option value="antar">antar</option>
           <option value="dijemput">dijemput</option>
         </select>
       </flex>

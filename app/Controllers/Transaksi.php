@@ -40,8 +40,10 @@
           }
       }
       public function showHistori(){
-        $historiAntar =  $this->transaksi->getTransaksiTerima();
-        $historiJemput =  $this->transaksi->getTransaksiJemput();
+        session();
+        $userId = $_SESSION['sesid_customer'];
+        $historiAntar =  $this->transaksi->getTransaksiTerima($userId);
+        $historiJemput =  $this->transaksi->getTransaksiJemput($userId);
         $data = array (
           'showHistoriAntar' => $historiAntar,
           'showHistoriJemput' => $historiJemput,

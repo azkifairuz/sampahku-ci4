@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ModelTransaksi extends Model
+class ModelPesaanan extends Model
 {
 
   public function transkasiTerima($data)
@@ -16,13 +16,13 @@ class ModelTransaksi extends Model
     return $query;
   }
 
-  public function getTransaksiTerima($idCust)
+  public function getTransaksiTerima($idMitra)
   {
     $builder = $this->db->query("SELECT a.* ,b.nama_mitra, b.alamat,c.kategori
     FROM `transaksi_terima` a
     INNER JOIN mitra b on a.id_mitra = b.id_mitra 
     INNER JOIN kategori c on a.id_kategori = c.id_kategori
-    WHERE a.id_customer = '$idCust'");
+    WHERE a.id_mitra = '$idMitra' ");
     return $builder->getResult();
   }
   public function transaksiJemput($data)
@@ -34,13 +34,13 @@ class ModelTransaksi extends Model
     return $query;
   }
 
-  public function getTransaksiJemput($idCust)
+  public function getTransaksiJemput($idMitra)
   {
     $builder = $this->db->query("SELECT a.* ,b.nama_mitra, b.alamat,c.kategori
     FROM `transaksi_jemput` a
     INNER JOIN mitra b on a.id_mitra = b.id_mitra 
-    INNER JOIN kategori c on a.id_kategori = c.id_kategori; 
-    WHERE a.id_customer = '$idCust'");
+    INNER JOIN kategori c on a.id_kategori = c.id_kategori
+    WHERE a.id_mitra = '$idMitra' ");
     return $builder->getResult();
   }
   
