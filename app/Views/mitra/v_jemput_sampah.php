@@ -87,7 +87,7 @@ echo view('layout/v_sidebar_mitra');
             <button>ACC</button>
           </a>
           <a class="bg-red-500 w-1/2 text-white text-center uppercase rounded-xl py-2  px-5"
-            href="<?php echo base_url('beranda/pilihMitra/' . $historiJemput->id) ?>">
+            href="<?php echo base_url('orderSampahMitra/tolakJemput/' . $historiJemput->id) ?>">
             <button>Tidak Valid</button>
           </a>
           <?php

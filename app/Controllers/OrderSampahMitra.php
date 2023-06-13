@@ -71,6 +71,21 @@ class OrderSampahMitra extends BaseController
         // update ccoin
         $this->coin->konversiJemput($idCus);
     }
+
+    public function tolakJemput($idHistori)
+    {
+        $historiAntar = $this->transaksi->getByIdJemput($idHistori);
+        foreach ($historiAntar as $histori) {
+            $id = $histori->id;
+            $idCus = $histori->id_customer;
+            $idMit = $histori->id_mitra;
+        }
+        $status = "tidak valid";
+        // update status menjadi acc
+        $this->pesanan->updateStatusJemput($status, $id);
+        // update ccoin
+        $this->coin->konversiJemput($idCus);
+    }
     public function accTerima($idHistori)
     {
         $historiAntar = $this->transaksi->getByIdAnter($idHistori);
@@ -82,7 +97,17 @@ class OrderSampahMitra extends BaseController
         $status = "acc";
         // update status menjadi acc
         $this->pesanan->updateStatusTerima($status, $id);
-        // update ccoin
-        $this->coin->konversi($idCus);
+    }
+    public function tolakTerima($idHistori)
+    {
+        $historiAntar = $this->transaksi->getByIdAnter($idHistori);
+        foreach ($historiAntar as $histori) {
+            $id = $histori->id;
+            $idCus = $histori->id_customer;
+            $idMit = $histori->id_mitra;
+        }
+        $status = "tidak valid";
+        // update status menjadi acc
+        $this->pesanan->updateStatusTerima($status, $id);
     }
 }

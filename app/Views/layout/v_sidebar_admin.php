@@ -25,7 +25,7 @@
             </a>
          </li>
          <li>
-            <a href="<?php echo base_url("OrderSampahMitra/orderTerima") ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <a href="<?php echo base_url("admin/daftarkanMitra") ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                <span class="flex-1 ml-3 whitespace-nowrap">Daftarkan Mitra</span>
             </a>
          </li>
@@ -53,6 +53,15 @@
    </div>
 </aside>
 
+<script>
+   // Initialization for ES Users
+import {
+  Ripple,
+  Input,
+  initTE,
+} from "tw-elements";
 
+initTE({ Ripple, Input });
+</script>
 </body>
 </html>

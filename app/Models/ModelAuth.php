@@ -21,10 +21,23 @@ class ModelAuth extends Model
 
     return $addCustomer;
   }
+  public function addMitra($data)
+  {
+    $addCustomer = $this->db->table('mitra')
+      ->insert($data);
+
+    return $addCustomer;
+  }
 
   public function getCustomer()
   {
     $query = $this->db->query("SELECT * FROM customer");
+    return $query->getResult();
+
+  }
+  public function getMitra()
+  {
+    $query = $this->db->query("SELECT * FROM mitra");
     return $query->getResult();
 
   }
