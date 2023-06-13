@@ -21,7 +21,7 @@ class ModelPesanan extends Model
     INNER JOIN mitra b on a.id_mitra = b.id_mitra 
     INNER JOIN kategori c on a.id_kategori = c.id_kategori
     INNER JOIN customer d on a.id_customer = d.id_customer
-    WHERE a.id_mitra = '$idMitra'  ");
+    WHERE a.id_mitra = '$idMitra' AND a.status = 'pending' ");
     return $builder->getResult();
   }
   public function transaksiJemput($data)
@@ -31,9 +31,14 @@ class ModelPesanan extends Model
     return $query;
   }
 
-  public function updateStatusJemput($status,$id)
+  public function updateStatusJemput($status, $id)
   {
     $query = $this->db->query("UPDATE `transaksi_jemput` SET `status`='$status' WHERE id = '$id'");
+    return $query;
+  }
+  public function updateStatusTerima($status, $id)
+  {
+    $query = $this->db->query("UPDATE `transaksi_terima` SET `status`='$status' WHERE id = '$id'");
     return $query;
   }
 
@@ -44,10 +49,10 @@ class ModelPesanan extends Model
     INNER JOIN mitra b on a.id_mitra = b.id_mitra 
     INNER JOIN kategori c on a.id_kategori = c.id_kategori
     INNER JOIN customer d on a.id_customer = d.id_customer
-    WHERE a.id_mitra = '$idMitra' ");
+    WHERE a.id_mitra = '$idMitra' AND a.status = 'pending' ");
     return $builder->getResult();
   }
-  
+
 
 
 }

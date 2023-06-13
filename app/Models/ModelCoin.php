@@ -8,7 +8,7 @@ class ModelCoin extends Model
 {
     public function coinDidapat($idCust)
     {
-        $query =$this->db->query( "SELECT a.id, a.id_mitra, a.id_customer,a.id_kategori,a.tanggal,a.coin as cointrans,a.berat,a.status ,b.nama_mitra, b.alamat,c.kategori, d.nilai_coin, a.berat * d.nilai_coin as totalkoindapat
+        $query = $this->db->query("SELECT a.id, a.id_mitra, a.id_customer,a.id_kategori,a.tanggal,a.coin as cointrans,a.berat,a.status ,b.nama_mitra, b.alamat,c.kategori, d.nilai_coin, a.berat * d.nilai_coin as totalkoindapat
         FROM transaksi_terima a
         INNER JOIN mitra b on a.id_mitra = b.id_mitra 
         INNER JOIN kategori c on a.id_kategori = c.id_kategori
@@ -17,9 +17,14 @@ class ModelCoin extends Model
 
         return $query->getResult();
     }
+    public function getCoinByIdMitra($idMitra)
+    {
+        $query = $this->db->query("SELECT * FROM coin where id_mitra='$idMitra'");
+        return $query->getResult();
+    }
     public function coinDidapatJemput($idCust)
     {
-        $query =$this->db->query( "SELECT a.id, a.id_mitra, a.id_customer,a.id_kategori,a.tanggal,a.coin as cointrans,a.berat,a.status ,b.nama_mitra, b.alamat,c.kategori, d.nilai_coin, a.berat * d.nilai_coin as totalkoindapat
+        $query = $this->db->query("SELECT a.id, a.id_mitra, a.id_customer,a.id_kategori,a.tanggal,a.coin as cointrans,a.berat,a.status ,b.nama_mitra, b.alamat,c.kategori, d.nilai_coin, a.berat * d.nilai_coin as totalkoindapat
         FROM transaksi_jemput a
         INNER JOIN mitra b on a.id_mitra = b.id_mitra 
         INNER JOIN kategori c on a.id_kategori = c.id_kategori
@@ -29,8 +34,14 @@ class ModelCoin extends Model
         return $query->getResult();
     }
 
-    public function updateCoin($idCust,$newCoin)
+    public function updateCoin($idCust, $newCoin)
     {
         $query = $this->db->query("UPDATE `customer` SET `coin`='$newCoin' WHERE id_customer = '$idCust'");
+        return $query;
+    }
+    public function updateHarga($idMitra, $coinValue)
+    {
+        $query = $this->db->query("UPDATE `coin` SET `nilai_coin`='$coinValue' WHERE id_mitra = '$idMitra'");
+        return $query;
     }
 }
