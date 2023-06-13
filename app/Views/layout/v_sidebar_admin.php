@@ -20,7 +20,7 @@
    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2 font-medium">
          <li>
-            <a href="<?php echo base_url("dashboard") ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <a href="<?php echo base_url("admin") ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                <span class="ml-3">Dashboard</span>
             </a>
          </li>
@@ -30,12 +30,12 @@
             </a>
          </li>
          <li>
-            <a href="<?php echo base_url("OrderSampahMitra/orderJemput") ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <a href="<?php echo base_url("admin/mitra") ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                <span class="flex-1 ml-3 whitespace-nowrap">Data Mitra</span>
             </a>
          </li>
          <li>
-            <a href="<?php echo base_url("OrderSampahMitra/orderJemput") ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <a href="<?php echo base_url("admin/customer") ?>" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                <span class="flex-1 ml-3 whitespace-nowrap">Data Customer</span>
             </a>
          </li>

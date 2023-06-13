@@ -36,4 +36,5 @@ class Admin extends BaseController
         );
         return view('admin/v_list_mitra',$data);
     }
+
 }
