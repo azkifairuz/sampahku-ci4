@@ -3,22 +3,31 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\ModelPesanan;
+use App\Models\ModelCoin;
 
 class Coin extends BaseController
 {
-    private $pesanan = "";
+    private $coin = "";
     public function __construct()
     {
-        $this->pesanan = new ModelPesanan;
+        $this->coin = new ModelCoin;
     }
     public function index()
     {
-        
+
     }
-    public function kenvesi()
+    public function konversi()
     {
-        $idMitra = 'mit-1';
-        $historiTerima = $this->pesanan->getTransaksiTerima($idMitra);
+        $idCust = 'cust-2';
+        $historiTerima = $this->coin->coinDidapat($idCust);
+        $total = 0;
+        foreach ($historiTerima as $row) {
+            var_dump($row->totalkoindapat);
+            $total+=floatval($row->totalkoindapat);
+        }
+        
+        var_dump($total);
+        
+
     }
 }
