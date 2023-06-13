@@ -4,15 +4,13 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ModelPesaanan extends Model
+class ModelPesanan extends Model
 {
 
   public function transkasiTerima($data)
   {
     $query = $this->db->table('transaksi_terima')
       ->insert($data);
-
-
     return $query;
   }
 
