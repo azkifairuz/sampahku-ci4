@@ -21,6 +21,12 @@ class ModelTransaksi extends Model
     $builder = $this->db->query("SELECT * FROM transaksi_jemput WHERE id = '$id' ");
     return $builder->getResult();
   }
+
+  public function getByIdAnter($id)
+  {
+    $builder = $this->db->query("SELECT * FROM transaksi_terima WHERE id = '$id' ");
+    return $builder->getResult();
+  }
   public function getTransaksiTerima($idCust)
   {
     $builder = $this->db->query("SELECT a.* ,b.nama_mitra, b.alamat,c.kategori

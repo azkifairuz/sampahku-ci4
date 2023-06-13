@@ -36,6 +36,11 @@ class ModelPesanan extends Model
     $query = $this->db->query("UPDATE `transaksi_jemput` SET `status`='$status' WHERE id = '$id'");
     return $query;
   }
+  public function updateStatusTerima($status,$id)
+  {
+    $query = $this->db->query("UPDATE `transaksi_jemput` SET `status`='$status' WHERE id = '$id'");
+    return $query;
+  }
 
   public function getTransaksiJemput($idMitra)
   {
