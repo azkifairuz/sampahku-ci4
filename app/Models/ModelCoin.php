@@ -17,4 +17,9 @@ class ModelCoin extends Model
 
         return $query->getResult();
     }
+
+    public function updateCoin($idCust,$newCoin)
+    {
+        $query = $this->db->query("UPDATE `customer` SET `coin`='$newCoin' WHERE id_customer = '$idCust'");
+    }
 }

@@ -24,10 +24,9 @@ class Coin extends BaseController
         foreach ($historiTerima as $row) {
             var_dump($row->totalkoindapat);
             $total+=floatval($row->totalkoindapat);
-        }
+        };
         
-        var_dump($total);
-        
+        $this->coin->updateCoin($idCust,$total);
 
     }
 }

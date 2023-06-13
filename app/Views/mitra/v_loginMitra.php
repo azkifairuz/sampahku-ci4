@@ -1,4 +1,6 @@
-<?php echo view('layout/v_header-login') ?>
+<?php  
+echo view('layout/siebar_mitra');
+?>
 <!DOCTYPE html>
 <html>
 
