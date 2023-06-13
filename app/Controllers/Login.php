@@ -78,7 +78,7 @@ class Login extends BaseController
                 ];
 
                 $this->session->set($dataSession);
-                return redirect()->to(base_url('mitra/dashboard'));
+                return redirect()->to(base_url('dashboard'));
             } else {
                 session()->setFlashdata('message', 'cek kembali Username atau Password anda');
                 return redirect()->to( base_url('login') );
